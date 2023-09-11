@@ -119,45 +119,6 @@ public class JobData {
 
         return matchingJobs;
     }
-//    public static ArrayList<HashMap<String, String>> findByValue(String value) {
-//
-//        // load data, if not already loaded
-//        loadData();
-//
-//        // TODO - implement this method
-//        ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
-//
-//        String lowerValue = value.toLowerCase();
-//
-//        for (HashMap<String, String> row : allJobs) {
-//            boolean foundInRow = false;
-//            HashMap<String, String> matchingRow = new HashMap<>();
-//
-//            for (String column : row.keySet()) {
-//                String columnValue = row.get(column);
-//
-//                String lowerColumnValue = columnValue.toLowerCase();
-//
-//                if (lowerColumnValue.contains(lowerValue)) {
-//                    foundInRow = true;
-//
-//                    matchingRow.put(column, columnValue);
-//                }
-//            }
-//
-//            if (foundInRow) {
-//                jobs.add(matchingRow);
-//            }
-//        }
-//
-//            ArrayList<HashMap<String, String>> uniqueJobs = new ArrayList<>();
-//            for (HashMap<String, String> job : jobs) {
-//                if (!uniqueJobs.contains(job)) {
-//                    uniqueJobs.add(job);
-//                }
-//            }
-//            return uniqueJobs;
-//        }
 
         /**
          * Read in data from a CSV file and store it in a list
