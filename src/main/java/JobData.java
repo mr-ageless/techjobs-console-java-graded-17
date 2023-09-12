@@ -70,7 +70,6 @@ public class JobData {
         loadData();
 
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
-
         for (HashMap<String, String> row : allJobs) {
 
             String aValue = row.get(column);
@@ -101,22 +100,16 @@ public class JobData {
         String lowerValue = value.toLowerCase();
 
         for (HashMap<String, String> job : allJobs) {
-            boolean foundInJob = false;
 
             for (String column : job.keySet()) {
                 String columnValue = job.get(column).toLowerCase();
 
                 if (columnValue.contains(lowerValue)) {
-                    foundInJob = true;
+                    matchingJobs.add(job); // Add the entire job entry to the result
                     break; // Exit the inner loop as soon as a match is found in this job
                 }
             }
-
-            if (foundInJob) {
-                matchingJobs.add(job); // Add the entire job entry to the result
-            }
         }
-
         return matchingJobs;
     }
 
